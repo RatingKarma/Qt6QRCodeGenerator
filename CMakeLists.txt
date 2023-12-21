@@ -7,6 +7,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 set(CMAKE_PREFIX_PATH "F:/Qt/6.6.0/mingw_64/lib/cmake")
+include_directories(./inc INC)
 
 find_package(Qt6 COMPONENTS
         Core
@@ -14,15 +15,20 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(QtDemo main.cpp
+add_executable(QtDemo
+        ${INC}
+        WIN32
+        main.cpp
         widget.cpp
         widget.hpp
         widget.ui
 )
+
 target_link_libraries(QtDemo
         Qt::Core
         Qt::Gui
         Qt::Widgets
+        "F:\\C++Proj\\QtDemo\\lib\\qrencode.lib"
 )
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)

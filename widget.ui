@@ -6,55 +6,197 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>588</width>
-    <height>445</height>
+    <width>582</width>
+    <height>376</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>widget</string>
   </property>
-  <widget class="QGraphicsView" name="graphicsView">
+  <widget class="QLabel" name="QRcode_box">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>30</y>
+     <width>221</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="text_edit">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>190</y>
-     <width>261</width>
-     <height>241</height>
+     <y>30</y>
+     <width>231</width>
+     <height>151</height>
     </rect>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QLabel" name="label_info">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>0</y>
-     <width>541</width>
-     <height>181</height>
+     <y>10</y>
+     <width>96</width>
+     <height>16</height>
     </rect>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="text">
+    <string>输入待生成的信息</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>220</y>
+     <width>195</width>
+     <height>104</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QCheckBox" name="checkbox_casesensitive">
+      <property name="text">
+       <string>大小写敏感</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="QLabel" name="label">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label_version">
+          <property name="text">
+           <string>尺寸等级</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_correction_lvl">
+          <property name="text">
+           <string>纠错等级</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="lineedit_version"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="combobox_correction_lvl">
+          <property name="currentText">
+           <string>L(7%纠错)</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>L(7%纠错)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>M(15%纠错)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Q(25%纠错)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>H(30%纠错)</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>10</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>二维码生成</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>260</y>
+     <width>174</width>
+     <height>56</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="btn_color_select1">
         <property name="text">
-         <string>输入待生成的信息</string>
+         <string>设置色块1</string>
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QPushButton" name="pushButton">
+      <item row="1" column="0">
+       <widget class="QPushButton" name="btn_color_select2">
         <property name="text">
-         <string>生成二维码</string>
+         <string>设置色块2</string>
         </property>
        </widget>
       </item>
      </layout>
     </item>
-    <item row="1" column="0">
-     <widget class="QTextEdit" name="textEdit"/>
+    <item>
+     <layout class="QFormLayout" name="formLayout_2">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="btn_QR_gen">
+        <property name="text">
+         <string>生成二维码</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="btn_save">
+        <property name="text">
+         <string>保存到本地</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
+  </widget>
+  <widget class="QPushButton" name="btn_clear">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>190</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清空文本框</string>
+   </property>
   </widget>
  </widget>
  <resources/>
