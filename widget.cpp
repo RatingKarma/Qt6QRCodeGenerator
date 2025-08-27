@@ -13,11 +13,11 @@ widget::widget(QWidget* parent) :
     ui->setupUi(this);
     this->setFixedSize(550, 350);
     this->setWindowTitle("二维码生成");
-    componant_init();
+    this->component_init();
     slot_init();
 }
 
-void widget::componant_init() {
+void widget::component_init() {
     ui->text_edit->clear();
     ui->QRcode_box->setStyleSheet("border: 1px solid black;");
     ui->checkbox_casesensitive->setChecked(true);

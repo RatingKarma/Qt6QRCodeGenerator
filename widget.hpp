@@ -32,7 +32,7 @@ class widget final : public QWidget {
         QColor background_color{ Qt::black };
         QColor frontend_color{ Qt::white };
 
-        void componant_init();
+        void component_init();
 
         void slot_init();
 
